@@ -1,0 +1,122 @@
+@import "header.css";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  z-index: 101;
+  /* New! */
+  background-image: url("../img/fondo.jpg");
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
+  background-attachment: scroll;
+}
+form {
+  /* --clr: #0ab3ff; */
+  --clr: #fff;
+  padding: 30px 60px 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9em;
+  /* margin-top: -80px; */
+  margin-top: 0;
+
+  /* Code recommended by Codeium */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  background-color: rgba(255, 255, 255, 0.15);
+}
+form h2 {
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1.3em;
+  letter-spacing: 0.1em;
+  margin-bottom: 25px;
+}
+.inputBox {
+  position: relative;
+  width: 300px;
+  margin-bottom: 40px;
+}
+.inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #999;
+  outline: none;
+  color: #fff;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+.inputBox label {
+  position: absolute;
+  left: 0;
+  padding: 10px 0;
+  pointer-events: none;
+  color: #999;
+  text-transform: uppercase;
+}
+.inputBox label span {
+  position: relative;
+  display: inline-flex;
+  letter-spacing: 0.05em;
+  transition: 0.2s ease-in-out;
+}
+.inputBox input:focus ~ label span,
+.inputBox input:valid ~ label span {
+  color: var(--clr);
+  letter-spacing: 0.15em;
+  transform: translateY(-25px);
+}
+.inputBox input:focus,
+.inputBox input:valid {
+  border-bottom: 2px solid var(--clr);
+}
+
+.inputBox input[type="submit"] {
+  /* background: var(--clr); */
+  background: var(--color-main);
+  border: none;
+  padding: 15px;
+  border-radius: 50px;
+  color: #1c2630;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: 0.7s;
+  font-size: 1em;
+}
+.inputBox input[type="submit"]:hover {
+  letter-spacing: 0.35em;
+}
+form p {
+  color: #fff;
+  text-transform: uppercase;
+}
+form p a {
+  color: var(--clr);
+  font-weight: 500;
+  text-decoration: none;
+}
+.box-shadow-form {
+  box-shadow: 0px 2.5px 2.5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.box-shadow-inputs {
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+.box-shadow-white {
+  box-shadow: 0.75rem 0.75rem 2.5rem rgba(255, 255, 255, 0.5);
+}
