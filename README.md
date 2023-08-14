@@ -12,7 +12,7 @@ Este proyecto consiste en elaborar un formulario con efectos de animación en lo
 
 <br>
 
-Take a look at the website at the following link [Github Pages] (https://cycscarlos.github.io/Animacion_Div):
+Take a look at the website at the following link [Github Pages] (https://cycscarlos.github.io/Animacion_Formulario):
 
 <br>
 
