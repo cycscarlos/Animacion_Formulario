@@ -1,6 +1,26 @@
 @import "header.css";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Open+Sans:ital,wght@0,300;0,400;1,300&family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 
+:root {
+  --step--4: clamp(0.48rem, 0.47rem + 0.06vw, 0.51rem);
+  --step--3: clamp(0.58rem, 0.55rem + 0.12vw, 0.64rem);
+  --step--2: clamp(0.69rem, 0.65rem + 0.21vw, 0.8rem);
+  --step--1: clamp(0.83rem, 0.77rem + 0.33vw, 1rem);
+  --step-0: clamp(1rem, 0.9rem + 0.49vw, 1.25rem);
+
+  --first-color: #ff4c00;
+  --black-color-opacity: rgba(0, 0, 0, 0.5);
+  --black-color-opacity-span: rgba(0, 0, 0, 0.3);
+  --white-color-opacity: rgba(255, 255, 255, 0.3);
+  --white-color: #fff;
+  --link-color: #509ee3;
+  --title-color: #333;
+  --text-color: #2a2a2a;
+  --green-color: #08f1af;
+  --font: "Raleway", sans-serif;
+  --max-width: 1400px;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -55,7 +75,6 @@ form h2 {
   outline: none;
   color: #fff;
   font-size: 0.8em;
-  text-transform: uppercase;
   letter-spacing: 0.15em;
 }
 .inputBox label {
@@ -74,7 +93,7 @@ form h2 {
 }
 .inputBox input:focus ~ label span,
 .inputBox input:valid ~ label span {
-  color: var(--clr);
+  color: var(--green-color);
   letter-spacing: 0.15em;
   transform: translateY(-25px);
 }
@@ -120,3 +139,47 @@ form p a {
 .box-shadow-white {
   box-shadow: 0.75rem 0.75rem 2.5rem rgba(255, 255, 255, 0.5);
 }
+
+/* Ventana Modal */
+.modal#gracias:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--black-color-opacity);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 1s;
+}
+
+.modal-content {
+  position: absolute;
+  right: 5rem;
+}
+
+.contact-form-response {
+  padding: 1rem;
+  width: 300px;
+  border-radius: 3px;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--white-color-opacity);
+}
+
+.contact-form-response svg {
+  margin-top: 2rem;
+  width: 4rem;
+  height: 4rem;
+  fill: var(--first-color);
+}
+/* End ventana modal */
